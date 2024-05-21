@@ -1,3 +1,13 @@
+body {
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #1A4D2E;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -5,12 +15,75 @@ table {
 
 th,
 td {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 8px;
     text-align: left;
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #1A4D2E;
+    color: #F5EFE6;
+}
+
+tr:nth-child(even) {
+    background-color: #E8DFCA;
+}
+
+tr:nth-child(odd) {
+    background-color: #F5EFE6;
+}
+
+button {
+    background-color: #1A4D2E;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#add,
+#edit {
+    display: none;
+}
+
+#addForm input{
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup input[type="number"] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.popup button {
+    background-color: #1A4D2E;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: #45a049;
 }
 
