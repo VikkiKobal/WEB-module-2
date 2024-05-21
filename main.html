@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movies</title>
+    <title>Auction Management</title>
     <script src="crud.js"></script>
     <script src="dom.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="auctionContainer"></div>
+    <div id="container">
+    </div>
     <script>
+        
         const movies = new MovieCollectionWithDom();
-        movies.mount(document.getElementById("auctionContainer"));
+        let inceptionMovie = new Movie("Inception", "Christopher Nolan", "https://www.youtube.com/watch?v=8hP9D6kZseM", 2010, 100);
+        movies.initializeWithData(inceptionMovie)
+
+        let interstellarMovie = new DetailedMovie("Interstellar", "Christopher Nolan", "https://www.youtube.com/watch?v=0vxOhd4qlYQ", 2014, 200);
+        movies.initializeWithData(interstellarMovie)
+
+        movies.mount(document.getElementById("container"));
     </script>
 </body>
 </html>
