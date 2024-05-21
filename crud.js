@@ -43,7 +43,7 @@ class MovieCollection {
     } 
  
     increaseBoxOfficeById(movieId, amount) { 
-        let movie = this.items.find(item => item.id === movieId); 
+        let movie = this.items.find(item => item._id === movieId); 
         if (!movie) { 
             throw `Movie with ID ${movieId} not found.`; 
         } 
@@ -51,11 +51,7 @@ class MovieCollection {
         movie.isBoxOfficeChanged = true;
         return movie.boxOffice; 
     } 
-}
+} 
 
-let inceptionMovie = new Movie("Inception", "Christopher Nolan", "https://www.youtube.com/watch?v=8hP9D6kZseM", 2010, 100);  
-this.addMovie(inceptionMovie);  
-this.increaseBoxOfficeById(inceptionMovie.id, 1000000);  
+
  
-let detailedMovie = new DetailedMovie("Interstellar", "Christopher Nolan", "https://www.youtube.com/watch?v=0vxOhd4qlYQ", 2014, 200);  
-this.addMovie(detailedMovie); 
